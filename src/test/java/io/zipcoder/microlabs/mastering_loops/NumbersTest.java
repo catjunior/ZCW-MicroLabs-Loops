@@ -72,14 +72,16 @@ public class NumbersTest {
         assertEquals(expected, actual);
     }
 
-    /*
     @Test
     public void powersTest(){
         //: Given
+        String expected = "powers(6)\n*** Output ***\n2\n4\n8\n16\n32\n64";
 
         //: When
+        String acutal = numbers.powers(6);
 
         //: Then
+        assertEquals(expected, acutal);
     }
-    */
+
 }
