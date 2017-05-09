@@ -70,13 +70,15 @@ public class Numbers {
     }
 
     public String powers(int n){
-        return "";
-    }
 
+        String result = "powers(" + n + ")\n*** Output ***";
 
-    public static void main(String[] args) {
-        Numbers test = new Numbers();
-        System.out.println(test.even(20));
+        for (int i = 1; i <= n; i++){
+
+            result = result + "\n" + (int)Math.pow(2, i);
+        }
+
+        return result;
     }
 
 }
