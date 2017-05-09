@@ -3,28 +3,80 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class Numbers {
 
+
+
     public String oneToTen(){
-        return "";
+
+        String result = "oneToTen()\n*** Output ***";
+
+        for (int i = 1; i <= 10; i ++) {
+
+            result = result + "\n" + i;
+        }
+
+        return result;
+
     }
+
 
     public String oddNumbers(){
-        return "";
+
+        String result = "oddNumbers()\n*** Output ***";
+
+        for (int i =1; i < 20; i++) {
+
+            if (i % 2 != 0) {
+
+                result = result + "\n" +i;
+            }
+        }
+
+        return result;
     }
+
+
 
     public String squares(){
-        return "";
+
+        String result = "squares()\n*** Output ***";
+
+        for (int i = 1; i <= 10; i++) {
+
+            result = result + "\n" + i*i;
+        }
+        return result;
     }
 
+    /*
     public String random4(){
         return "";
     }
+    */
 
     public String even(int n){
-        return "";
+
+
+        String result = "even(" + n + ")\n*** Output ***";
+
+        for (int i = 1; i < n; i++) {
+
+            if (i % 2 == 0) {
+
+                result = result + "\n" + i;
+            }
+        }
+
+        return result;
     }
 
     public String powers(int n){
         return "";
+    }
+
+
+    public static void main(String[] args) {
+        Numbers test = new Numbers();
+        System.out.println(test.even(20));
     }
 
 }
