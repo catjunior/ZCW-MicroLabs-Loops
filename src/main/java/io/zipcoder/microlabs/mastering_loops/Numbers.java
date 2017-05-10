@@ -47,11 +47,22 @@ public class Numbers {
         return result;
     }
 
-    /*
+
     public String random4(){
-        return "";
+
+        String result = "random4()\n*** Output ***";
+
+        for (int i = 0; i < 4; i++ ){
+
+            result = result + "\n" + (int)(Math.random() * 10 + 1);
+        }
+
+        return result;
     }
-    */
+
+
+
+
 
     public String even(int n){
 
@@ -79,6 +90,12 @@ public class Numbers {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        Numbers num = new Numbers();
+        System.out.println( num.random4() );
+
     }
 
 }

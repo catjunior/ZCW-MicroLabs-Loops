@@ -49,16 +49,35 @@ public class NumbersTest {
         assertEquals(expected, actual);
     }
 
-    /*
+
     @Test
     public void random4Test(){
-        //: Given
+
+        //: given
+        String expectedLine1 = "random4()";
+        String expectedLine2 = "*** Output ***";
 
         //: When
+        String actual = numbers.random4();   // break the actual into separated lines
+        String[] actLn = actual.split("\n");
+        int[] temp = new int[6];
+
+        for (int i = 2; i < 6; i++){
+
+            temp[i] = Integer.parseInt(actLn[i]);
+        }
 
         //: Then
+        assertEquals(expectedLine1, actLn[0]);    // test if the intro part is the same
+        assertEquals(expectedLine2, actLn[1]);
+
+        for (int j = 2; j < 6; j++) {        // test if the random numbers are within the range 1-10
+
+            assertTrue(0 < temp[j] && temp[j] < 11);
+        }
+
     }
-    */
+
 
     @Test
     public void evenTest(){
@@ -71,6 +90,7 @@ public class NumbersTest {
         //: Then
         assertEquals(expected, actual);
     }
+    
 
     @Test
     public void powersTest(){
