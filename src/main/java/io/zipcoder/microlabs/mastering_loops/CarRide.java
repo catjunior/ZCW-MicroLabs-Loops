@@ -35,12 +35,12 @@ public class CarRide {
         return finalOutPut;
     }
 
-    /*
+
     public static void main(String[] args) {
 
-        CarRide newCustomer = new CarRide();
+        CarRide newCustomer = new CarRide(System.in);
         newCustomer.areWeThereYet();
     }
-    */
+
 }
 
