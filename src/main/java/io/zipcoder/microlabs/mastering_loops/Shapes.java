@@ -42,11 +42,6 @@ public class Shapes {
 
                     result = result + "| " + j + " "; // spacing for column 3 and beyond, but value >= 10
 
-                } else if (j == 16) {                 // avoid extra line break at the end
-
-                    result = result + "| " + j + " |";
-                    break outerloop;
-
                 } else {
 
                     result = result + "| " + j + " "; //spacing for the rest of the square
@@ -58,7 +53,7 @@ public class Shapes {
 
         }
 
-        return result;
+        return result.trim();
     }
 
 
@@ -81,11 +76,6 @@ public class Shapes {
 
                     result = result + "| " + j + " "; // spacing for column 3 and beyond, but value >= 10
 
-                } else if (j == n * n) {                 // avoid extra line break at the end
-
-                    result = result + "| " + j + " |";
-                    break outerloop;
-
                 } else {
 
                     result = result + "| " + j + " "; //spacing for the rest of the square
@@ -97,7 +87,14 @@ public class Shapes {
 
         }
 
-        return result;
+        return result.trim();
+    }
+
+
+
+    public static void main(String[] args) {
+        Shapes shape = new Shapes();
+        System.out.println( shape.tableSquares(9).trim());
     }
 
 }
