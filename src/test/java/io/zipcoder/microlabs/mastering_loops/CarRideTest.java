@@ -3,27 +3,26 @@ package io.zipcoder.microlabs.mastering_loops;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import java.util.Scanner;
+import java.io.ByteArrayInputStream;
 
 public class CarRideTest {
 
 
     @Test
     public void areWeThereYetTest(){
+
         //Given:
-        String input;
-        String expected = "\"Are we there yet?\"\n + No\n\"Are we there yet?\"\nSoon\n\"Are we there yet?\"\nYes\nGood!";
+        String input = "No\nSpoons\nYes\n";
+        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(input.getBytes());
+        CarRide carRide = new CarRide(byteArrayInputStream);
 
-        //When:
-        Scanner userInput = new Scanner(System.in);
-        input = userInput.nextLine().toLowerCase();
+        String expected = "Good!";
 
+        // when
+        String actual = carRide.areWeThereYet();
 
-        CarRide newCustomer = new CarRide ();
-        String actual = newCustomer.areWeThereYet();
-
-        //Then:
-        assertEquals(expected, actual, 0);
+        // then
+        assertEquals(expected, actual);
     }
 
 }

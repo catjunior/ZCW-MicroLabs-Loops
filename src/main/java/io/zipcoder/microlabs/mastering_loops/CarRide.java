@@ -1,11 +1,20 @@
 package io.zipcoder.microlabs.mastering_loops;
 
 import java.util.Scanner;
+import java.io.InputStream;
+
 
 
 public class CarRide {
 
-    Scanner userInput = new Scanner(System.in);
+
+    // ok! this worked, but idk the codes
+    Scanner user;
+
+    CarRide(InputStream scannerIn) {
+
+        user = new Scanner(scannerIn);
+    }
 
 
     public String areWeThereYet(){
@@ -16,7 +25,7 @@ public class CarRide {
         do {
 
             System.out.println("\"Are we there yet?\"");
-            input = userInput.nextLine().toLowerCase();
+            input = user.nextLine().toLowerCase();
 
         } while (!input.equals("yes"));
 
@@ -26,11 +35,12 @@ public class CarRide {
         return finalOutPut;
     }
 
+    /*
     public static void main(String[] args) {
 
         CarRide newCustomer = new CarRide();
         newCustomer.areWeThereYet();
     }
-
+    */
 }
 

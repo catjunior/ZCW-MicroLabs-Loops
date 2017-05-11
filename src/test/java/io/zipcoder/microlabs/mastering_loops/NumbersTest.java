@@ -90,7 +90,7 @@ public class NumbersTest {
         //: Then
         assertEquals(expected, actual);
     }
-    
+
 
     @Test
     public void powersTest(){
