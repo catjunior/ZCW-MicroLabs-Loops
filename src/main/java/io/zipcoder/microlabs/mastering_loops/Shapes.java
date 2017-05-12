@@ -68,14 +68,9 @@ public class Shapes {
             innerloop: // for columns
             for (int j = i; j <= i * n; j = j+i) {
 
-                if (j >= i * 2 && j < 10) {         // spacing for column 2 and beyond, and the value is < 10
+                if (j < 10) {         // spacing for column 2 and beyond, and the value is < 10
 
                     result = result + "|  " + j + " ";
-
-                } else if (j > 9 && j < n * n) {
-
-                    result = result + "| " + j + " "; // spacing for column 3 and beyond, but value >= 10
-
                 } else {
 
                     result = result + "| " + j + " "; //spacing for the rest of the square
@@ -94,7 +89,7 @@ public class Shapes {
 
     public static void main(String[] args) {
         Shapes shape = new Shapes();
-        System.out.println( shape.tableSquares(9).trim());
+        System.out.println( shape.tableSquares(10).trim());
     }
 
 }
