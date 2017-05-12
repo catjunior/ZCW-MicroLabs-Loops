@@ -62,19 +62,24 @@ public class Shapes {
 
         String result = "tableSquares(" + n + ")\n*** Output ***\n";
 
+        int maxLength = (int) Math.log10(n*n) + 1;
+
         outerloop: // for rows
         for (int i = 1; i <= n; i++){
 
             innerloop: // for columns
             for (int j = i; j <= i * n; j = j+i) {
 
-                if (j < 10) {         // spacing for column 2 and beyond, and the value is < 10
+                String spaces = "";
+                String strJ = Integer.toString(j);
+                int jLength = strJ.length();
 
-                    result = result + "|  " + j + " ";
-                } else {
-
-                    result = result + "| " + j + " "; //spacing for the rest of the square
+                spaceAdder:
+                for (int k = 0; k < (maxLength - jLength ); k++){ // for the space before each digits
+                    spaces = spaces + " ";
                 }
+
+                result = result + "|" + spaces + j + " ";
 
             }
 
@@ -89,7 +94,8 @@ public class Shapes {
 
     public static void main(String[] args) {
         Shapes shape = new Shapes();
-        System.out.println( shape.tableSquares(10).trim());
+        System.out.println( shape.tableSquares(100).trim());
     }
 
 }
+

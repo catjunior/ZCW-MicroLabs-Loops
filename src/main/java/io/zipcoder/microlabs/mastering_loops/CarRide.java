@@ -8,9 +8,10 @@ import java.io.InputStream;
 public class CarRide {
 
 
-    // ok! this worked, but idk the codes
+
     Scanner user;
 
+    // for unit test purples, use constructor to create a new "user", so the test can simulate the input
     CarRide(InputStream scannerIn) {
 
         user = new Scanner(scannerIn);

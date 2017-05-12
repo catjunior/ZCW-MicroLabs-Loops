@@ -12,7 +12,7 @@ public class CarRideTest {
     public void areWeThereYetTest(){
 
         //Given:
-        String input = "No\nSpoons\nYes\n";
+        String input = "No\nSpoons\nYes\n";  // simulate the userInput
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(input.getBytes());
         CarRide carRide = new CarRide(byteArrayInputStream);
 
