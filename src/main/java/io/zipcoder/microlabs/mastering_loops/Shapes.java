@@ -64,26 +64,25 @@ public class Shapes {
 
         int maxLength = (int) Math.log10(n*n) + 1;
 
-        outerloop: // for rows
+        rows:
         for (int i = 1; i <= n; i++){
 
-            innerloop: // for columns
-            for (int j = i; j <= i * n; j = j+i) {
+            columns:
+            for (int j = i; j <= i * n; j += i) {
 
                 String spaces = "";
-                String strJ = Integer.toString(j);
-                int jLength = strJ.length();
+                int jLength = Integer.toString(j).length();
 
                 spaceAdder:
                 for (int k = 0; k < (maxLength - jLength ); k++){ // for the space before each digits
-                    spaces = spaces + " ";
+                    spaces += " ";
                 }
 
-                result = result + "|" + spaces + j + " ";
+                result += "|" + spaces + j + " ";
 
             }
 
-            result = result + "|" + "\n"; // this is where innerloop(row) ends
+            result += "|" + "\n"; // this is where innerloop(row) ends
 
         }
 
